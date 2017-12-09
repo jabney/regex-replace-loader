@@ -2,7 +2,7 @@ regex-replace-loader
 ====================
 [![Build Status](https://travis-ci.org/jabney/regex-replace-loader.svg?branch=master)](https://travis-ci.org/jabney/regex-replace-loader)
 
-Use regex to replace values in files.
+Use regex to replace values in files, or transform source from one form into another.
 
 ## Example usage
 Replace a specific string in a file with another.
