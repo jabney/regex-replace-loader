@@ -75,6 +75,7 @@ function getValueOrMatchFn(value) {
     throw new Error(
       NAME + ': option "value" must be a string or a function')
   }
+
   return value
 }
 
