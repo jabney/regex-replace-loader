@@ -213,11 +213,11 @@ input	         | The original string.
 
 ```javascript
 value: function (match) {
-  match[0]     // the full match
-  match[1]     // the first capture group
-  match[2]     // the second capture group, etc.
-  match[index] // the position of the match in the input string
-  match[input] // the original source input string
+  match[0]        // the full match
+  match[1]        // the first capture group
+  match[2]        // the second capture group, etc.
+  match['index']  // the position of the match in the input string
+  match['input']  // the original source input string
 
   return match[0] // This would result in an "identity" operation, where
                   // the replaced value is the same as the original
