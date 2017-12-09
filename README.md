@@ -146,6 +146,7 @@ $& | Inserts the matched substring.
 $` | Inserts the portion of the string that precedes the matched substring.
 $' | Inserts the portion of the string that follows the matched substring.
 $n | Where n is a positive integer less than 100, inserts the nth parenthesized submatch string, provided the first argument was a RegExp object. Note that this is 1-indexed.
+
 [Specifying a string as a parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_string_as_a_parameter)
 
 For example, `$&` inserts the matched substring, so setting `options.value` to `$&` would result in an "identity" operation.
