@@ -20,7 +20,7 @@ test('Example 1: simple staged replace', async () => {
   const source = helpers.value(output)
 
   expect(source).toMatch(/Today\'s date is \w{3} \w{3} \d{2} \d{4}/)
-  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT-\d{4} \(\w{3}\)/)
+  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT(?:\+|-)\d{4} \(\w{3}\)/)
 })
 
 test('Example 2: replace equation with summary', async () => {
@@ -54,5 +54,5 @@ test('Example 3: render variables to template', async () => {
   const source = helpers.value(output)
 
   expect(source).toMatch(/Today\'s date is \w{3} \w{3} \d{2} \d{4}/)
-  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT-\d{4} \(\w{3}\)/)
+  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT(?:\+|-)\d{4} \(\w{3}\)/)
 })
