@@ -85,7 +85,7 @@ function getValueOrMatchFn(value) {
  * value function.
  *
  * @param {(match: RegExpMatchArray) => string} valueFn
- * @returns {(m: string, ...args: string[], i: number, source: string) => string}
+ * @returns {(m: string, ...args: string[], i: number, s: string) => string}
  */
 function getMatchFn(valueFn) {
   return function () {
