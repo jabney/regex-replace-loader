@@ -13,7 +13,7 @@ test('Example 1: simple staged replace', async () => {
       flags: '',
       value: new Date().toTimeString(),
     }]
-}
+  }
 
   const stats = await compiler('data/example1.txt', options)
   const output = stats.toJson().modules[0].source
