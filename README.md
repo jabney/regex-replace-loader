@@ -114,6 +114,8 @@ import json from './someinfo.json'
 options: {
   regex: '<search expression>' | /search expression/<flags>,
   flags: 'g', // Ignored if regex is a RegExp object
+  value: '<replace value>' | function (match) { return 'some value' },
+  stages: [ {options}, {options}, ... ]
 }
 ```
 
@@ -134,7 +136,7 @@ stages: [
 ```
 
 ## Using the `value` option
-The `options.value` parameter can be a `string` or `function`. While using a function is more flexible, there are some special uses when `options.value` is a string.
+The `options.value` parameter can be a `string` or `function`. While using a function is more flexible and powerful, there are some special uses when `options.value` is a string.
 
 ### `value` as a string
 When `options.value` is a string, certain [special replacement patterns](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_string_as_a_parameter) are available.
