@@ -1,0 +1,41 @@
+{
+  "name": "regex-replace-loader",
+  "version": "0.1.0",
+  "description": "A webpack loader to replace values in files with regex",
+  "author": "James Abney",
+  "license": "MIT",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jabney/regex-replace-loader.git"
+  },
+  "scripts": {
+    "webpack": "webpack --config ./dev/webpack.config.js",
+    "start": "nodemon --exec 'npm run webpack' --watch index.js --watch dev",
+    "test": "jest"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "regex",
+    "regular",
+    "expressions",
+    "replace"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "loader-utils": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "@types/node": "^8.0.57",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "memory-fs": "^0.4.1",
+    "nodemon": "^1.12.4",
+    "webpack": "^3.10.0"
+  }
+}

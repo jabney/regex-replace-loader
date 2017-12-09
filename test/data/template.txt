@@ -1,0 +1,2 @@
+Today's date is #{date}
+The time is #{time}

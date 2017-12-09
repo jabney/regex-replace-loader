@@ -1,0 +1,2 @@
+Today's date is THE_DATE
+The time is THE_TIME
