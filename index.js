@@ -5,6 +5,14 @@ var loaderUtils = require('loader-utils')
 var NAME = 'Regex Replace Loader'
 
 /**
+ * @typedef {Object} LoaderOptions
+ * @property {string|RegExp} regex
+ * @property {string} [flags]
+ * @property {string|((match: RegExpExecArray) => string)} value
+ * @property {LoaderOptions[]} [stages]
+ */
+
+/**
  * The Regex Replace Loader.
  *
  * Replace values from the source via a regular expression.
@@ -13,7 +21,7 @@ var NAME = 'Regex Replace Loader'
  * @returns {string}
  */
 function regexReplaceLoader(source) {
-  var options = loaderUtils.getOptions(this)
+  var options = getOptions(this)
 
   var stages = Array.isArray(options.stages)
     ? options.stages
@@ -27,6 +35,16 @@ function regexReplaceLoader(source) {
   })
 
   return 'module.exports = ' + JSON.stringify(result)
+}
+
+/**
+ * Return the options object.
+ *
+ * @param {LoaderContext} context
+ * @returns {LoaderOptions}
+ */
+function getOptions(context) {
+  return loaderUtils.getOptions(context)
 }
 
 /**
@@ -106,7 +124,7 @@ function getMatchFn(valueFn) {
  *
  * @param {RegExp} regex
  * @param {string} source
- * @param {any} options
+ * @param {LoaderOptions} options
  * @returns {string}
  */
 function replace(regex, source, options) {
