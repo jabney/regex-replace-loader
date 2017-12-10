@@ -23,7 +23,7 @@ function regexReplaceLoader(source) {
 
   stages.forEach(function (stage) {
     var regex = getRegex(stage.regex, stage.flags)
-    result = exec(regex, result, stage)
+    result = replace(regex, result, stage)
   })
 
   return 'module.exports = ' + JSON.stringify(result)
@@ -109,7 +109,7 @@ function getMatchFn(valueFn) {
  * @param {any} options
  * @returns {string}
  */
-function exec(regex, source, options) {
+function replace(regex, source, options) {
   var valueOrFn = getValueOrMatchFn(options.value)
   source.replace(regex, function () { return '' })
   return source.replace(regex, valueOrFn)
