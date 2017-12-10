@@ -4,6 +4,8 @@ regex-replace-loader
 
 Use regex to replace values in files, or transform source from one form into another.
 
+The `regex-replace-loader` takes a file's content as input, runs it against a user-supplied regular expression, and makes substitutions based on the user-supplied replace `value`, which can be either a string or a function that returns a value.
+
 ## Example usage
 Replace a specific string in a file with another.
 
@@ -219,8 +221,9 @@ value: function (match) {
   match['index']  // the position of the match in the input string
   match['input']  // the original source input string
 
-  return match[0] // This would result in an "identity" operation, where
-                  // the replaced value is the same as the original
+  return match[0] // This would result in an "identity" operation,
+                  // where the replaced value is the same as the
+                  // original matched value
 }
 ```
 
