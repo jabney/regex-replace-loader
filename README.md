@@ -2,7 +2,7 @@ regex-replace-loader
 ====================
 [![Build Status](https://travis-ci.org/jabney/regex-replace-loader.svg?branch=master)](https://travis-ci.org/jabney/regex-replace-loader)
 
-Use regex to replace values in files, or transform source from one form into another.
+A webpack loader that uses regex to replace values in files, or transform source into another form.
 
 The `regex-replace-loader` takes a file's content as input, runs it against a user-supplied regular expression, and makes substitutions based on the user-supplied replace `value`, which can be either a string or a function that returns a value.
 
