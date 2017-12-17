@@ -7,7 +7,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jabney/regex-replace-loader.git"
+    "url": "git+git@github.com:jabney/regex-replace-loader.git"
   },
   "scripts": {
     "webpack": "webpack --config ./dev/webpack.config.js",
