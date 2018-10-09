@@ -18,7 +18,7 @@ test('Replaces template strings with values', async () => {
   const source = helpers.value(output)
 
   expect(source).toMatch(/Today\'s date is \w{3} \w{3} \d{2} \d{4}/)
-  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT(?:\+|-)\d{4} \(\w+?\)/)
+  expect(source).toMatch(/The time is \d{2}:\d{2}:\d{2} GMT(?:\+|-)\d{4} \([a-z ]+?\)/i)
 })
 
 test('Replaces template strings with values in stages', async () => {
